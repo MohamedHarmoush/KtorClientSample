@@ -63,4 +63,18 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 
+
+    //Ktor dependencies
+    implementation "io.ktor:ktor-client-core:$ktor_version"
+    //1- HTTP engine => Android The HTTP client used to perform network requests.
+    implementation "io.ktor:ktor-client-android:$ktor_version"
+    //or // HTTP engine => Okhttp
+    // implementation "io.ktor:ktor-client-okhttp:$ktorVersion"
+
+    //2- Serialization: Processing request and response payloads as JSON and serializing
+    // them from/to your data models, using kotlinx Serialization.
+    implementation "io.ktor:ktor-client-serialization:$ktor_version"
+    implementation "io.ktor:ktor-client-logging:$ktor_version"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version"
 }
